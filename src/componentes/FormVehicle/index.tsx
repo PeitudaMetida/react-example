@@ -1,12 +1,11 @@
 import './index.css';
 
 export interface VehicleInputList {
-  description: React.RefObject<HTMLInputElement>;
-  image: React.RefObject<HTMLInputElement>;
-  km: React.RefObject<HTMLInputElement>;
-  name: React.RefObject<HTMLInputElement>;
-  price: React.RefObject<HTMLInputElement>;
-  year: React.RefObject<HTMLInputElement>;
+  Name_Complete: React.RefObject<HTMLInputElement>;
+  Year: React.RefObject<HTMLInputElement>;
+  Address: React.RefObject<HTMLInputElement>;
+  Sexo: React.RefObject<HTMLInputElement>;
+  Number: React.RefObject<HTMLInputElement>;
   id: React.RefObject<HTMLInputElement>;
 }
 
@@ -20,39 +19,44 @@ function FormVehicle({
     handleOnSubmit,
     inputList: { 
       id,
-      description,
-      image,
-      km,
-      name,
-      price,
-      year
+      Name_Complete,
+      Year,
+      Address,
+      Sexo,
+      Number
     },
     isAdding
   }: Props) {
   return (
     <form onSubmit={handleOnSubmit}>
       <input ref={id} type="hidden" id="id" name="id" />
-      <label htmlFor="image">Imagem</label>
       <br />
-      <input ref={image} id="image" name="image" type="text" placeholder='Insira o link da imagem'/>
-      <label htmlFor="name">Nome</label>
+      <label htmlFor="Name_Complete">Nome De Usúario</label>
       <br />
-      <input ref={name} id="name" name="name" type="text" placeholder='Insira o nome'/>
-      <label htmlFor="description">Descrição</label>
+      <input ref={Name_Complete} id="Name_Complete" name="Name_Complete" type="text" placeholder='Insira a descrição'/>
+      <label htmlFor="Year">Endereço </label>
       <br />
-      <input ref={description} id="description" name="description" type="text" placeholder='Insira a descrição'/>
-      <label htmlFor="price">Preço</label>
+      <input ref={Address} id="Address" name="Address" type="number" placeholder='Insira o Endereço'/>
       <br />
-      <input ref={price} id="price" name="price" type="text" placeholder='Insira o preço'/>
-      <label htmlFor="year">Ano</label>
+      <label htmlFor="Number"> Número de celular </label>
       <br />
-      <input ref={year} id="year" name="year" type="text" placeholder='Insira o ano'/>
-      <label htmlFor="km">Km</label>
+      <input ref={Number} id="Number" name="Number" type="Number" placeholder='Insira o número de celular'/>
       <br />
-      <input ref={km} id="km" name="km" type="number" placeholder='Insira o km'/>
+      <input ref={Sexo} id="Sexo" name="Sexo" type="radio" placeholder='Insira o preço'/>
+      <br />
+      <label htmlFor="Sexo">Sexo</label>
+      <label htmlFor="sexo"> Masculino  </label>
+      <input ref={Sexo} id="Sexo" name="Sexo" type="radio" placeholder='Insira o preço'/> 
+      <label htmlFor="sexo"> Feminino</label> 
       <br />
       <br />
-      <input type="submit" value={isAdding ? "Criar carro" : "Alterar carro"} />
+      <label htmlFor="Year">Data de nascimento</label>
+      <br />
+      <input ref={Year} id="year" name="year" type="date" placeholder='Insira a data de Nascimento'/>
+      <br />
+      <br />
+      <br />
+      <input type="submit" value={isAdding ? "Criar usuário" : "Alterar"} />
     </form>
   )
 }
