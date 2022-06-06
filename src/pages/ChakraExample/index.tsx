@@ -6,13 +6,10 @@ function ChakraExample() {
   const { setCount, count } = useCounter();
   return (
     <>
-      <h1>Exemplo usando Chakra UI</h1>
-      <h1>Vezes clicado {count}</h1>
-      <Button colorScheme={"blue"} onClick={() => setCount(oldCount => oldCount + 1)}>Clique para somar 1 no contador</Button>
-      <Divider m={5}/>
+    
       <Menu></Menu>
       <Box maxW='225px' m="50px" borderWidth='1px' borderRadius='lg' overflow='hidden'>
-        <Image src="https://http2.mlstatic.com/D_Q_NP_920969-MLA48642250185_122021-AB.webp" alt="notebook" />
+        <Image src="https://www.ideiaspara.com.br/dominios/skillemblemas/imagens/usuario.svg" alt="foto do usuário" />
         <Divider/>
         <Box p='6'>
           <Box
