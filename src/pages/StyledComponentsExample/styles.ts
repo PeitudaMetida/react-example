@@ -28,8 +28,8 @@ export const Container = styled.div`
     border: 1px solid #eee!important;
 
     img {
-        width: 100%;
-        height: 225px;
+        width: 95%;
+        height: 150px;
     }
 
     div {
@@ -60,7 +60,7 @@ export const Container = styled.div`
 export const Button = styled.button`
     border: none;
     border-radius: 5px;
-    color: white;
+    color: #007bff;
     font-weight: bold;
     padding: 10px;
 
@@ -72,3 +72,4 @@ export const Button = styled.button`
         background-color: #007bff;
     }
 `;
+
